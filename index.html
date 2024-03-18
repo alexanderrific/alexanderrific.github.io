@@ -1,6 +1,7 @@
 
 <!-- The button element creates a button on the screen-->
-<button id="button1">Run Function </button> 
+<button id="button1">Alex är bäst </button> <br>
+<button id="button2">My är bäst </button>
 
 <script>
 var myButton = document.getElementById("button1");
@@ -8,7 +9,15 @@ console.log(myButton);
 myButton.addEventListener("click", hello)
 
 function hello(){
-var message = "Hello World!"
+var message = "Fint av dig"
+alert(message)
+};
+var myButton = document.getElementById("button2");
+console.log(myButton);
+myButton.addEventListener("click", hello1)
+
+function hello1(){
+var message = "Enig! älskar dig!"
 alert(message)
 };
 
