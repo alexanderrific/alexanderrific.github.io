@@ -1,7 +1,7 @@
 
 <!-- The button element creates a button on the screen-->
 <button id="button1">Alex är bäst </button> <br>
-<button id="button2">My är bäst </button>
+<button id="button2">My är inte bäst </button>
 
 <script>
 var myButton = document.getElementById("button1");
@@ -9,7 +9,7 @@ console.log(myButton);
 myButton.addEventListener("click", hello)
 
 function hello(){
-var message = "Fint av dig"
+var message = "Rätt svar, tack!"
 alert(message)
 };
 var myButton = document.getElementById("button2");
@@ -17,7 +17,7 @@ console.log(myButton);
 myButton.addEventListener("click", hello1)
 
 function hello1(){
-var message = "Enig! älskar dig!"
+var message = "Fel svar, försök igen!"
 alert(message)
 };
 
