@@ -8,18 +8,23 @@ var myButton = document.getElementById("button1");
 console.log(myButton);
 myButton.addEventListener("click", hello)
 
-function hello(){
-var message = "Rätt svar, tack!"
-alert(message)
-};
 var myButton = document.getElementById("button2");
 console.log(myButton);
 myButton.addEventListener("click", hello1)
+
+document.write(message)
+
+function hello(){
+var message = "Rätt svar, tack!"
+alert(message)
+document.write(message)
+};
 
 function hello1(){
 var message = "Fel svar, försök igen!"
 alert(message)
 };
+
 
 
 </script>
