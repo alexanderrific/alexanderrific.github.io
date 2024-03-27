@@ -1,30 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatzy Scoreboard 🎲</title>
+</head>
+<body>
+  <h1 style="font-size: 45px; text-align:center">Yatzy Scoreboard 🎲</h1>
+  <h2 style = "text-align: center">by Alexander Karlsson</h2><br></b>
 
-<!-- The button element creates a button on the screen-->
-<button id="button1">Alex är bäst </button> <br>
-<button id="button2">Alex är inte bäst </button>
+<d</div>
+  <button id="button1">Ettor</button><span id="ettor111">Your result</span><br>
+  <button id="button2">Tvåor</button><span id="tvåor222">Your result</span><br>
+  <button id="button3">Treor</button><span id="treor333">Your result</span><br>
+  <button id="button4">Fyror</button><span id="fyror444">Your result</span><br>
+  <button id="button5">Femmor</button><span id="femmor555">Your result</span><br>
+  <button id="button6">Sexor</button><span id="sexor666">Your result</span><br>
 
+  <span id=delsumma1>Delsumma</span><span id=delsumma>-------</span><br>
+  <span id=bonus1>Bonus</span><span id=bonus>-------</span><br>
+
+  <button id="button7">Tvåpar</button><span id="twopair222">Your result</span><br>
+
+  <style> span {
+    border: 1px solid black;;
+    background-color: rgb(237, 236, 236);
+    align-self: auto;
+
+    
+  }
+
+
+  </style>
 <script>
-var myButton = document.getElementById("button1");
-console.log(myButton);
-myButton.addEventListener("click", hello)
+//Hämta knappen från html and all of the variables that NEEDS to be outside a function.
+var myButton1 = document.getElementById("button1");
+var myButton2 = document.getElementById("button2");
+var myButton3 = document.getElementById("button3");
+var myButton4 = document.getElementById("button4");
+var myButton5 = document.getElementById("button5");
+var myButton6 = document.getElementById("button6");
+var myButton7 = document.getElementById("button7")
+var ettor1 
+var tvaor
+var treor
+var fyror
+var femmor
+var sexor 
+var twopair
 
-var myButton = document.getElementById("button2");
-console.log(myButton);
-myButton.addEventListener("click", hello1)
 
-document.write(message)
+//Vad händer när man klickar på knappen "Ettor"
+myButton1.addEventListener("click", result1);
+//the function determing what happens when you press the button
+function result1(){
+ettor1 = prompt("Ettor. \nEnter your score: ")
 
-function hello(){
-var message = "Rätt svar, tack!"
-alert(message)
-document.write(message)
-};
+if (ettor1 <=5 )
+document.getElementById("ettor111").innerHTML = ettor1
 
-function hello1(){
-var message = "Fel svar, försök igen!"
-alert(message)
-};
+else result1()
+}
+
+//Vad händer när man klickar på knappen "Tvåor"
+myButton2.addEventListener("click", result2);
+// The variable deciding what the result of the 2's can be
+var tvaorresult = [0, 2, 4, 6, 8, 10]
+
+//the function determing what happens when you press the button "Tvåor"
+function result2(){
+tvaor = prompt("Tvåor. \nEnter your score: ")
+tvaor = Number(tvaor)
+
+if (tvaorresult.includes(tvaor))
+document.getElementById("tvåor222").innerHTML = tvaor
+
+else result2()
+}
+
+//Vad händer när man klickar på knappen "Treor"
+myButton3.addEventListener("click", result3);
+// The variable deciding what the result of the 2's can be
+var treorresult = [0, 3, 6, 9, 12, 15]
+
+//the function determing what happens when you press the button "Tvåor"
+function result3(){
+treor = prompt("Treor. \nEnter your score: ")
+treor = Number(treor)
+
+if (treorresult.includes(treor))
+document.getElementById("treor333").innerHTML = treor
+
+else result3()
+}
+
+//Vad händer när man klickar på knappen "Fyror"
+myButton4.addEventListener("click", result4);
+// The variable deciding what the result of the 2's can be
+var fyrorresult = [0, 4, 8, 12, 16, 20]
+
+//the function determing what happens when you press the button "Tvåor"
+function result4(){
+fyror = prompt("Fyror. \nEnter your score: ")
+fyror = Number(fyror)
+
+if (fyrorresult.includes(fyror))
+document.getElementById("fyror444").innerHTML = fyror
+
+else result4()
+}
+
+//Vad händer när man klickar på knappen "Femmor"
+myButton5.addEventListener("click", result5);
+// The variable deciding what the result of the 2's can be
+var femmorresult = [0, 5, 10, 15, 20, 25]
+
+//the function determing what happens when you press the button "Tvåor"
+function result5(){
+femmor = prompt("Femmor. \nEnter your score: ")
+femmor = Number(femmor)
+
+if (femmorresult.includes(femmor))
+document.getElementById("femmor555").innerHTML = femmor
+
+else result5()
+}
+
+//Vad händer när man klickar på knappen "Sexor"
+myButton6.addEventListener("click", result6);
+// The variable deciding what the result of the 2's can be
+var sexorresult = [0, 6, 12, 18, 24, 30]
+
+
+function result6(){
+sexor = prompt("Sexor. \nEnter your score: ")
+sexor = Number(sexor)
+
+if (sexorresult.includes(sexor))
+  document.getElementById("sexor666").innerHTML = sexor
+
+else result6()
+}
+
+//the function determing what happens when you press the button "Tvåpar"
+//myButton7.addEventListener("click", twopair2);
+//var twopairresult = "divideable by 2, no less than 2 and not hight than 22"
+//
+//function twopair2(){
+//twopair = prompt("Tvåpar. \nEnter your score: ")
+//twopair = Number(twopair)
+//
+//if (twopairresult.includes(twopair))
+//document.getElementById("twopair222").innerHTML = twopair
+//
+//else twopair2()
+//}
+
+//var twopairresult = "divideable by 2, no less than 2 and not higher than 22";
+
+myButton7.addEventListener("click", twopair2);
+
+function twopair2() {
+    twopair = prompt("Tvåpar. \nEnter your score: ");
+    twopair = Number(twopair);
+
+    // Check if the entered score meets the conditions
+    if (!isNaN(twopair) && twopair % 2 === 0 && twopair >= 2 && twopair <= 22) {
+        document.getElementById("twopair222").innerHTML = twopair;
+    } 
+    else {
+        // If the entered score doesn't meet the conditions, prompt again
+        twopair2();
+    }
+}
 
 
 
 </script>
+
+</body>
+</html>
+    
